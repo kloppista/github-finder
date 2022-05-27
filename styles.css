@@ -1,0 +1,188 @@
+@use 'variables';
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+label {
+  font-weight: 600;
+  font-size: large;
+  padding-top: 0.3rem;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #2a2a72;
+}
+
+#main {
+  background-color: #4c2885;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(0, 0, 0, 0.1);
+  width: 50vw;
+  height: 70vh;
+  color: white;
+}
+
+#main .title {
+  text-align: center;
+}
+
+#main .title h1 {
+  padding-top: 1rem;
+}
+
+#main input[type="text"] {
+  margin: 1.5rem 0.5rem 1.5rem 2rem;
+  width: 25vw;
+  height: 5vh;
+  -webkit-box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+#main input[type="text"]:focus {
+  outline: none;
+}
+
+#main input[type="text"]::-webkit-input-placeholder {
+  color: #bbb;
+}
+
+#main input[type="text"]:-ms-input-placeholder {
+  color: #bbb;
+}
+
+#main input[type="text"]::-ms-input-placeholder {
+  color: #bbb;
+}
+
+#main input[type="text"]::placeholder {
+  color: #bbb;
+}
+
+#main button {
+  /* Variables */
+  --button_radius: 0.75em;
+  --button_color: #e8e8e8;
+  --button_outline_color: #000000;
+  font-size: 10px;
+  font-weight: bold;
+  border: none;
+  border-radius: var(--button_radius);
+  background: var(--button_outline_color);
+}
+
+#main .button_top {
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.75em 1.5em;
+  background: var(--button_color);
+  color: var(--button_outline_color);
+  -webkit-transform: translateY(-0.2em);
+          transform: translateY(-0.2em);
+  -webkit-transition: -webkit-transform 0.1s ease;
+  transition: -webkit-transform 0.1s ease;
+  transition: transform 0.1s ease;
+  transition: transform 0.1s ease, -webkit-transform 0.1s ease;
+}
+
+#main button:hover .button_top {
+  /* Pull the button upwards when hovered */
+  -webkit-transform: translateY(-0.33em);
+          transform: translateY(-0.33em);
+  cursor: pointer;
+}
+
+#main button:active .button_top {
+  /* Push the button downwards when pressed */
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+#main .data {
+  max-width: 40vw;
+  margin-left: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#main .data hr {
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: -webkit-gradient(linear, right top, left top, from(#ccc), color-stop(#333), to(#ccc));
+  background-image: linear-gradient(to left, #ccc, #333, #ccc);
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  #main {
+    width: 80vw;
+    height: 70vh;
+  }
+  #main input[type="text"] {
+    display: block;
+    width: 60%;
+  }
+  #main button {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  #main {
+    width: 44vw;
+    height: 70vh;
+  }
+  #main button {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+  }
+  #main hr {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  #main {
+    width: 50vw;
+    height: 65vh;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  #main {
+    width: 50vw;
+    height: 65vh;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
